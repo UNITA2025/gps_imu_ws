@@ -1,0 +1,187 @@
+[0.006s] Invoking command in '/home/songsong/gps_imu_ws/build/umx_driver': CMAKE_PREFIX_PATH=/home/songsong/gps_imu_ws/install/serial:/home/songsong/gps_imu_ws/install/imu_gps_sync_cmake:/home/songsong/gps_imu_ws/install/umx_driver:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --build /home/songsong/gps_imu_ws/build/umx_driver -- -j6 -l6
+[0.095s] [  4%] Built target gtest
+[0.096s] [  6%] Built target ament_cmake_python_copy_umx_driver
+[0.096s] [  9%] Built target umx_driver__rosidl_generator_c
+[0.100s] [ 10%] Built target umx_driver__cpp
+[0.101s] [ 13%] Built target gtest_main
+[0.128s] [ 20%] Built target umx_driver__rosidl_typesupport_introspection_c
+[0.128s] [ 26%] Built target umx_driver__rosidl_typesupport_fastrtps_c
+[0.134s] [ 32%] Built target umx_driver__rosidl_typesupport_cpp
+[0.144s] [ 41%] Built target umx_driver__rosidl_typesupport_c
+[0.145s] [ 44%] Built target umx_driver__rosidl_typesupport_fastrtps_cpp
+[0.157s] [ 50%] Built target umx_driver__rosidl_typesupport_introspection_cpp
+[0.179s] [ 61%] Built target um7_driver
+[0.180s] [ 63%] Built target um6_driver
+[0.183s] [ 69%] Built target um6_comms_test
+[0.183s] [ 73%] Built target um6_register_test
+[0.189s] [ 80%] Built target um7_comms_test
+[0.196s] [ 80%] Built target umx_driver
+[0.197s] [ 84%] Built target um7_register_test
+[0.209s] [ 86%] Built target umx_driver__py
+[0.225s] [ 90%] Built target umx_driver__rosidl_generator_py
+[0.241s] [ 93%] Built target umx_driver__rosidl_typesupport_introspection_c__pyext
+[0.242s] [ 96%] Built target umx_driver__rosidl_typesupport_fastrtps_c__pyext
+[0.243s] [100%] Built target umx_driver__rosidl_typesupport_c__pyext
+[0.275s] running egg_info
+[0.276s] writing umx_driver.egg-info/PKG-INFO
+[0.276s] writing dependency_links to umx_driver.egg-info/dependency_links.txt
+[0.277s] writing top-level names to umx_driver.egg-info/top_level.txt
+[0.278s] reading manifest file 'umx_driver.egg-info/SOURCES.txt'
+[0.278s] writing manifest file 'umx_driver.egg-info/SOURCES.txt'
+[0.299s] [100%] Built target ament_cmake_python_build_umx_driver_egg
+[0.309s] Invoked command in '/home/songsong/gps_imu_ws/build/umx_driver' returned '0': CMAKE_PREFIX_PATH=/home/songsong/gps_imu_ws/install/serial:/home/songsong/gps_imu_ws/install/imu_gps_sync_cmake:/home/songsong/gps_imu_ws/install/umx_driver:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --build /home/songsong/gps_imu_ws/build/umx_driver -- -j6 -l6
+[0.309s] Invoking command in '/home/songsong/gps_imu_ws/build/umx_driver': CMAKE_PREFIX_PATH=/home/songsong/gps_imu_ws/install/serial:/home/songsong/gps_imu_ws/install/imu_gps_sync_cmake:/home/songsong/gps_imu_ws/install/umx_driver:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --install /home/songsong/gps_imu_ws/build/umx_driver
+[0.315s] -- Install configuration: ""
+[0.317s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/ament_index/resource_index/rosidl_interfaces/umx_driver
+[0.317s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver
+[0.317s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv
+[0.317s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/um7_reset.h
+[0.317s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail
+[0.317s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__functions.c
+[0.317s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__type_support.h
+[0.317s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__functions.c
+[0.317s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__struct.h
+[0.317s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__struct.h
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__functions.h
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__type_support.h
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__functions.h
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/um6_reset.h
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/msg
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/msg/rosidl_generator_c__visibility_control.h
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/environment/library_path.sh
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/environment/library_path.dsv
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/lib/libumx_driver__rosidl_generator_c.so
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__rosidl_typesupport_fastrtps_c.h
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__rosidl_typesupport_fastrtps_c.h
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/msg
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.318s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/lib/libumx_driver__rosidl_typesupport_fastrtps_c.so
+[0.320s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver
+[0.320s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv
+[0.320s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/um7_reset.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/um6_reset.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__struct.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__traits.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__builder.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__traits.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__builder.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__type_support.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__type_support.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__struct.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/msg
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/dds_fastrtps
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__rosidl_typesupport_fastrtps_cpp.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__rosidl_typesupport_fastrtps_cpp.hpp
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/msg
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/lib/libumx_driver__rosidl_typesupport_fastrtps_cpp.so
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__type_support.c
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__rosidl_typesupport_introspection_c.h
+[0.321s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__type_support.c
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__rosidl_typesupport_introspection_c.h
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/msg
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/lib/libumx_driver__rosidl_typesupport_introspection_c.so
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/lib/libumx_driver__rosidl_typesupport_c.so
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__type_support.cpp
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um6_reset__rosidl_typesupport_introspection_cpp.hpp
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__rosidl_typesupport_introspection_cpp.hpp
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/include/umx_driver/umx_driver/srv/detail/um7_reset__type_support.cpp
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/lib/libumx_driver__rosidl_typesupport_introspection_cpp.so
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/lib/libumx_driver__rosidl_typesupport_cpp.so
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/environment/pythonpath.sh
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/environment/pythonpath.dsv
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver-1.0.1-py3.10.egg-info
+[0.322s] -- Installing: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver-1.0.1-py3.10.egg-info/PKG-INFO
+[0.322s] -- Installing: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver-1.0.1-py3.10.egg-info/dependency_links.txt
+[0.322s] -- Installing: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver-1.0.1-py3.10.egg-info/SOURCES.txt
+[0.322s] -- Installing: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver-1.0.1-py3.10.egg-info/top_level.txt
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/libumx_driver__rosidl_generator_py.so
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/_umx_driver_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/_umx_driver_s.ep.rosidl_typesupport_introspection_c.c
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/umx_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/umx_driver_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/umx_driver_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/srv
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/srv/_um6_reset_s.c
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/srv/_um6_reset.py
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/srv/_um7_reset_s.c
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/srv/_um7_reset.py
+[0.322s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/srv/__init__.py
+[0.323s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/_umx_driver_s.ep.rosidl_typesupport_c.c
+[0.323s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/__init__.py
+[0.339s] Listing '/home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver'...
+[0.339s] Listing '/home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/srv'...
+[0.343s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/umx_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[0.343s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/umx_driver_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[0.343s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/local/lib/python3.10/dist-packages/umx_driver/umx_driver_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[0.343s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/lib/libumx_driver__rosidl_generator_py.so
+[0.343s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/srv/Um6Reset.idl
+[0.343s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/srv/Um7Reset.idl
+[0.343s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/srv/Um6Reset.srv
+[0.343s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/srv/Um6Reset_Request.msg
+[0.343s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/srv/Um6Reset_Response.msg
+[0.344s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/srv/Um7Reset.srv
+[0.344s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/srv/Um7Reset_Request.msg
+[0.344s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/srv/Um7Reset_Response.msg
+[0.344s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/lib/umx_driver/um6_driver
+[0.344s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/lib/umx_driver/um7_driver
+[0.344s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/test/umx_driver/um6_comms_test
+[0.344s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/test/umx_driver/um6_register_test
+[0.344s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/test/umx_driver/um7_comms_test
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/test/umx_driver/um7_register_test
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/ament_index/resource_index/package_run_dependencies/umx_driver
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/ament_index/resource_index/parent_prefix_path/umx_driver
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/environment/ament_prefix_path.sh
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/environment/ament_prefix_path.dsv
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/environment/path.sh
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/environment/path.dsv
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/local_setup.bash
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/local_setup.sh
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/local_setup.zsh
+[0.345s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/local_setup.dsv
+[0.346s] -- Installing: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.dsv
+[0.346s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/ament_index/resource_index/packages/umx_driver
+[0.346s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/export_umx_driver__rosidl_generator_cExport.cmake
+[0.346s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/export_umx_driver__rosidl_generator_cExport-noconfig.cmake
+[0.348s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/export_umx_driver__rosidl_typesupport_fastrtps_cExport.cmake
+[0.348s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/export_umx_driver__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.348s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/export_umx_driver__rosidl_generator_cppExport.cmake
+[0.348s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/export_umx_driver__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.348s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/export_umx_driver__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.348s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/umx_driver__rosidl_typesupport_introspection_cExport.cmake
+[0.348s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/umx_driver__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.348s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/umx_driver__rosidl_typesupport_cExport.cmake
+[0.348s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/umx_driver__rosidl_typesupport_cExport-noconfig.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/umx_driver__rosidl_typesupport_introspection_cppExport.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/umx_driver__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/umx_driver__rosidl_typesupport_cppExport.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/umx_driver__rosidl_typesupport_cppExport-noconfig.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/export_umx_driver__rosidl_generator_pyExport.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/export_umx_driver__rosidl_generator_pyExport-noconfig.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/rosidl_cmake-extras.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/ament_cmake_export_targets-extras.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/umx_driverConfig.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/cmake/umx_driverConfig-version.cmake
+[0.349s] -- Up-to-date: /home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.xml
+[0.351s] Invoked command in '/home/songsong/gps_imu_ws/build/umx_driver' returned '0': CMAKE_PREFIX_PATH=/home/songsong/gps_imu_ws/install/serial:/home/songsong/gps_imu_ws/install/imu_gps_sync_cmake:/home/songsong/gps_imu_ws/install/umx_driver:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --install /home/songsong/gps_imu_ws/build/umx_driver

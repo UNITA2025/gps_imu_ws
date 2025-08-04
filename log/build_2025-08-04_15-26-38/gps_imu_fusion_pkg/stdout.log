@@ -1,0 +1,53 @@
+running egg_info
+creating ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info
+writing ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/requires.txt
+writing top-level names to ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/top_level.txt
+writing manifest file '../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/SOURCES.txt'
+reading manifest file '../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build
+creating /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib
+creating /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+copying imu_gps_sync_py/gps_to_web.py -> /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+copying imu_gps_sync_py/gps_with_grid.py -> /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+copying imu_gps_sync_py/imu_to_csv.py -> /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+copying imu_gps_sync_py/gps_to_point.py -> /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+copying imu_gps_sync_py/gps_imu_sync.py -> /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+copying imu_gps_sync_py/gps_path_pub.py -> /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+copying imu_gps_sync_py/gps_repub.py -> /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+copying imu_gps_sync_py/gps_to_csv.py -> /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+copying imu_gps_sync_py/__init__.py -> /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+copying imu_gps_sync_py/imu_repub.py -> /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py
+running install
+running install_lib
+creating /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+copying /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py/gps_to_web.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+copying /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py/gps_with_grid.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+copying /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py/imu_to_csv.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+copying /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py/gps_to_point.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+copying /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py/gps_imu_sync.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+copying /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py/gps_path_pub.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+copying /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py/gps_repub.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+copying /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py/gps_to_csv.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+copying /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py/__init__.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+copying /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build/lib/imu_gps_sync_py/imu_repub.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py
+byte-compiling /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py/gps_to_web.py to gps_to_web.cpython-310.pyc
+byte-compiling /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py/gps_with_grid.py to gps_with_grid.cpython-310.pyc
+byte-compiling /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py/imu_to_csv.py to imu_to_csv.cpython-310.pyc
+byte-compiling /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py/gps_to_point.py to gps_to_point.cpython-310.pyc
+byte-compiling /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py/gps_imu_sync.py to gps_imu_sync.cpython-310.pyc
+byte-compiling /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py/gps_path_pub.py to gps_path_pub.cpython-310.pyc
+byte-compiling /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py/gps_repub.py to gps_repub.cpython-310.pyc
+byte-compiling /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py/gps_to_csv.py to gps_to_csv.cpython-310.pyc
+byte-compiling /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/imu_gps_sync_py/imu_repub.py to imu_repub.cpython-310.pyc
+running install_data
+creating /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/ament_index
+creating /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/ament_index/resource_index
+creating /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/ament_index/resource_index/packages

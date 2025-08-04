@@ -1,0 +1,406 @@
+[0.067s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.067s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff7edb6560>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff7edb5e70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff7edb5e70>>, mixin_verb=('build',))
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.164s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/songsong/gps_imu_ws'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extensions ['colcon_pkg']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extension 'colcon_pkg'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extensions ['colcon_meta']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extension 'colcon_meta'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extensions ['ros']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extension 'ros'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extensions ['cmake', 'python']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extension 'cmake'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extension 'python'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extensions ['python_setup_py']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(13_09_16_july) by extension 'python_setup_py'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extensions ['colcon_pkg']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extension 'colcon_pkg'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extensions ['colcon_meta']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extension 'colcon_meta'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extensions ['ros']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extension 'ros'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extensions ['cmake', 'python']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extension 'cmake'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extension 'python'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extensions ['python_setup_py']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(hill_driving) by extension 'python_setup_py'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extension 'ros'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extensions ['cmake', 'python']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extension 'cmake'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extension 'python'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extensions ['python_setup_py']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(normal_driving) by extension 'python_setup_py'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extension 'ros'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extensions ['cmake', 'python']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extension 'cmake'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extension 'python'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extensions ['python_setup_py']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_46_12) by extension 'python_setup_py'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extension 'ros'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extensions ['cmake', 'python']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extension 'cmake'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extension 'python'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extensions ['python_setup_py']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_21-03_55_51) by extension 'python_setup_py'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extension 'python'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extensions ['python_setup_py']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_27_36) by extension 'python_setup_py'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extension 'python'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extensions ['python_setup_py']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_32_35) by extension 'python_setup_py'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extension 'python'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extensions ['python_setup_py']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-14_36_09) by extension 'python_setup_py'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extensions ['cmake', 'python']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extension 'cmake'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2025_07_23-16_35_11) by extension 'python_setup_py'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extensions ['cmake', 'python']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extension 'cmake'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(short_road_driving) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_imu_fusion_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_imu_fusion_pkg) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_imu_fusion_pkg) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_imu_fusion_pkg) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_imu_fusion_pkg) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_imu_fusion_pkg) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_imu_fusion_pkg) by extension 'colcon_meta'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_imu_fusion_pkg) by extensions ['ros']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_imu_fusion_pkg) by extension 'ros'
+[0.179s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gps_imu_fusion_pkg' with type 'ros.ament_python' and name 'gps_imu_fusion_pkg'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial-ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial-ros2) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial-ros2) by extension 'ignore_ament_install'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial-ros2) by extensions ['colcon_pkg']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial-ros2) by extension 'colcon_pkg'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial-ros2) by extensions ['colcon_meta']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial-ros2) by extension 'colcon_meta'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial-ros2) by extensions ['ros']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial-ros2) by extension 'ros'
+[0.180s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial-ros2' with type 'ros.ament_cmake' and name 'serial'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'ros'
+[0.180s] DEBUG:colcon.colcon_core.package_identification:Package 'src/um7' with type 'ros.ament_cmake' and name 'umx_driver'
+[0.180s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.200s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/songsong/gps_imu_ws/install/imu_gps_sync_py' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.200s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/songsong/gps_imu_ws/install/imu_gps_sync_cmake' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.200s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/songsong/gps_imu_ws/install/imu_gps_sync_cmake' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.200s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/songsong/gps_imu_ws/install
+[0.201s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 276 installed packages in /opt/ros/humble
+[0.202s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.227s] Level 5:colcon.colcon_core.verb:set package 'gps_imu_fusion_pkg' build argument 'cmake_args' from command line to 'None'
+[0.227s] Level 5:colcon.colcon_core.verb:set package 'gps_imu_fusion_pkg' build argument 'cmake_target' from command line to 'None'
+[0.227s] Level 5:colcon.colcon_core.verb:set package 'gps_imu_fusion_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.227s] Level 5:colcon.colcon_core.verb:set package 'gps_imu_fusion_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.227s] Level 5:colcon.colcon_core.verb:set package 'gps_imu_fusion_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.227s] Level 5:colcon.colcon_core.verb:set package 'gps_imu_fusion_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.227s] Level 5:colcon.colcon_core.verb:set package 'gps_imu_fusion_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.227s] Level 5:colcon.colcon_core.verb:set package 'gps_imu_fusion_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.227s] Level 5:colcon.colcon_core.verb:set package 'gps_imu_fusion_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.227s] DEBUG:colcon.colcon_core.verb:Building package 'gps_imu_fusion_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg', 'merge_install': False, 'path': '/home/songsong/gps_imu_ws/src/gps_imu_fusion_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_args' from command line to 'None'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_target' from command line to 'None'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_clean_cache' from command line to 'False'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_clean_first' from command line to 'False'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_force_configure' from command line to 'False'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'ament_cmake_args' from command line to 'None'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'catkin_cmake_args' from command line to 'None'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.228s] DEBUG:colcon.colcon_core.verb:Building package 'serial' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/songsong/gps_imu_ws/build/serial', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/songsong/gps_imu_ws/install/serial', 'merge_install': False, 'path': '/home/songsong/gps_imu_ws/src/serial-ros2', 'symlink_install': False, 'test_result_base': None}
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'umx_driver' build argument 'cmake_args' from command line to 'None'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'umx_driver' build argument 'cmake_target' from command line to 'None'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'umx_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'umx_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'umx_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'umx_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'umx_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'umx_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.228s] Level 5:colcon.colcon_core.verb:set package 'umx_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.228s] DEBUG:colcon.colcon_core.verb:Building package 'umx_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/songsong/gps_imu_ws/build/umx_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/songsong/gps_imu_ws/install/umx_driver', 'merge_install': False, 'path': '/home/songsong/gps_imu_ws/src/um7', 'symlink_install': False, 'test_result_base': None}
+[0.229s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.229s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.229s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/songsong/gps_imu_ws/src/serial-ros2' with build type 'ament_cmake'
+[0.230s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/songsong/gps_imu_ws/src/serial-ros2'
+[0.235s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.235s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.235s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.238s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/songsong/gps_imu_ws/src/gps_imu_fusion_pkg' with build type 'ament_python'
+[0.238s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_imu_fusion_pkg', 'ament_prefix_path')
+[0.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/hook/ament_prefix_path.ps1'
+[0.239s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/hook/ament_prefix_path.dsv'
+[0.240s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/hook/ament_prefix_path.sh'
+[0.240s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.240s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.248s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/songsong/gps_imu_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --build /home/songsong/gps_imu_ws/build/serial -- -j6 -l6
+[0.397s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/songsong/gps_imu_ws/src/gps_imu_fusion_pkg'
+[0.398s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.398s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.402s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/songsong/gps_imu_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --build /home/songsong/gps_imu_ws/build/serial -- -j6 -l6
+[0.408s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/songsong/gps_imu_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --install /home/songsong/gps_imu_ws/build/serial
+[0.414s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial)
+[0.414s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/songsong/gps_imu_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --install /home/songsong/gps_imu_ws/build/serial
+[0.416s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial' for CMake module files
+[0.416s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial' for CMake config files
+[0.416s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial', 'cmake_prefix_path')
+[0.416s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/serial/share/serial/hook/cmake_prefix_path.ps1'
+[0.417s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/songsong/gps_imu_ws/install/serial/share/serial/hook/cmake_prefix_path.dsv'
+[0.417s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/serial/share/serial/hook/cmake_prefix_path.sh'
+[0.417s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial/lib'
+[0.418s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial/bin'
+[0.418s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial/lib/pkgconfig/serial.pc'
+[0.418s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial/lib/python3.10/site-packages'
+[0.418s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial/bin'
+[0.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/serial/share/serial/package.ps1'
+[0.419s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/songsong/gps_imu_ws/install/serial/share/serial/package.dsv'
+[0.419s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/serial/share/serial/package.sh'
+[0.420s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/serial/share/serial/package.bash'
+[0.421s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/serial/share/serial/package.zsh'
+[0.421s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/songsong/gps_imu_ws/install/serial/share/colcon-core/packages/serial)
+[0.421s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial)
+[0.421s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial' for CMake module files
+[0.422s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial' for CMake config files
+[0.422s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial', 'cmake_prefix_path')
+[0.422s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/serial/share/serial/hook/cmake_prefix_path.ps1'
+[0.422s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/songsong/gps_imu_ws/install/serial/share/serial/hook/cmake_prefix_path.dsv'
+[0.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/serial/share/serial/hook/cmake_prefix_path.sh'
+[0.423s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial/lib'
+[0.423s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial/bin'
+[0.423s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial/lib/pkgconfig/serial.pc'
+[0.424s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial/lib/python3.10/site-packages'
+[0.424s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/serial/bin'
+[0.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/serial/share/serial/package.ps1'
+[0.424s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/songsong/gps_imu_ws/install/serial/share/serial/package.dsv'
+[0.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/serial/share/serial/package.sh'
+[0.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/serial/share/serial/package.bash'
+[0.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/serial/share/serial/package.zsh'
+[0.425s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/songsong/gps_imu_ws/install/serial/share/colcon-core/packages/serial)
+[0.426s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/songsong/gps_imu_ws/src/um7' with build type 'ament_cmake'
+[0.426s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/songsong/gps_imu_ws/src/um7'
+[0.426s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.426s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.433s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/songsong/gps_imu_ws/build/umx_driver': CMAKE_PREFIX_PATH=/home/songsong/gps_imu_ws/install/serial:/home/songsong/gps_imu_ws/install/imu_gps_sync_cmake:/home/songsong/gps_imu_ws/install/umx_driver:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --build /home/songsong/gps_imu_ws/build/umx_driver -- -j6 -l6
+[0.635s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/songsong/gps_imu_ws/src/gps_imu_fusion_pkg': PYTHONPATH=/home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gps_imu_fusion_pkg build --build-base /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build install --record /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/install.log --single-version-externally-managed install_data
+[0.736s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/songsong/gps_imu_ws/build/umx_driver' returned '0': CMAKE_PREFIX_PATH=/home/songsong/gps_imu_ws/install/serial:/home/songsong/gps_imu_ws/install/imu_gps_sync_cmake:/home/songsong/gps_imu_ws/install/umx_driver:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --build /home/songsong/gps_imu_ws/build/umx_driver -- -j6 -l6
+[0.737s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/songsong/gps_imu_ws/build/umx_driver': CMAKE_PREFIX_PATH=/home/songsong/gps_imu_ws/install/serial:/home/songsong/gps_imu_ws/install/imu_gps_sync_cmake:/home/songsong/gps_imu_ws/install/umx_driver:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --install /home/songsong/gps_imu_ws/build/umx_driver
+[0.778s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(umx_driver)
+[0.778s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver' for CMake module files
+[0.778s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/songsong/gps_imu_ws/build/umx_driver' returned '0': CMAKE_PREFIX_PATH=/home/songsong/gps_imu_ws/install/serial:/home/songsong/gps_imu_ws/install/imu_gps_sync_cmake:/home/songsong/gps_imu_ws/install/umx_driver:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg:/home/songsong/gps_imu_ws/install/imu_gps_sync_py:/opt/ros/humble /usr/bin/cmake --install /home/songsong/gps_imu_ws/build/umx_driver
+[0.781s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver' for CMake config files
+[0.781s] Level 1:colcon.colcon_core.shell:create_environment_hook('umx_driver', 'cmake_prefix_path')
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/cmake_prefix_path.ps1'
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/cmake_prefix_path.dsv'
+[0.783s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/cmake_prefix_path.sh'
+[0.784s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver/lib'
+[0.784s] Level 1:colcon.colcon_core.shell:create_environment_hook('umx_driver', 'ld_library_path_lib')
+[0.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/ld_library_path_lib.ps1'
+[0.785s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/ld_library_path_lib.dsv'
+[0.785s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/ld_library_path_lib.sh'
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver/bin'
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver/lib/pkgconfig/umx_driver.pc'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver/lib/python3.10/site-packages'
+[0.787s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver/bin'
+[0.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.ps1'
+[0.787s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.dsv'
+[0.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.sh'
+[0.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.bash'
+[0.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.zsh'
+[0.789s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/songsong/gps_imu_ws/install/umx_driver/share/colcon-core/packages/umx_driver)
+[0.789s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(umx_driver)
+[0.790s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver' for CMake module files
+[0.790s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver' for CMake config files
+[0.790s] Level 1:colcon.colcon_core.shell:create_environment_hook('umx_driver', 'cmake_prefix_path')
+[0.790s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/cmake_prefix_path.ps1'
+[0.790s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/cmake_prefix_path.dsv'
+[0.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/cmake_prefix_path.sh'
+[0.792s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver/lib'
+[0.792s] Level 1:colcon.colcon_core.shell:create_environment_hook('umx_driver', 'ld_library_path_lib')
+[0.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/ld_library_path_lib.ps1'
+[0.792s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/ld_library_path_lib.dsv'
+[0.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/hook/ld_library_path_lib.sh'
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver/bin'
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver/lib/pkgconfig/umx_driver.pc'
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver/lib/python3.10/site-packages'
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/umx_driver/bin'
+[0.793s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.ps1'
+[0.793s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.dsv'
+[0.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.sh'
+[0.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.bash'
+[0.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/umx_driver/share/umx_driver/package.zsh'
+[0.795s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/songsong/gps_imu_ws/install/umx_driver/share/colcon-core/packages/umx_driver)
+[0.816s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg' for CMake module files
+[0.817s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/songsong/gps_imu_ws/src/gps_imu_fusion_pkg' returned '0': PYTHONPATH=/home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gps_imu_fusion_pkg build --build-base /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/build install --record /home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/install.log --single-version-externally-managed install_data
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg' for CMake config files
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib'
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/bin'
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/pkgconfig/gps_imu_fusion_pkg.pc'
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages'
+[0.818s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_imu_fusion_pkg', 'pythonpath')
+[0.818s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/hook/pythonpath.ps1'
+[0.818s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/hook/pythonpath.dsv'
+[0.819s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/hook/pythonpath.sh'
+[0.819s] Level 1:colcon.colcon_core.environment:checking '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/bin'
+[0.819s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gps_imu_fusion_pkg)
+[0.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/package.ps1'
+[0.820s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/package.dsv'
+[0.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/package.sh'
+[0.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/package.bash'
+[0.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/package.zsh'
+[0.822s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/colcon-core/packages/gps_imu_fusion_pkg)
+[0.822s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.822s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.823s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.823s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.828s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.828s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.828s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.844s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.844s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/songsong/gps_imu_ws/install/local_setup.ps1'
+[0.846s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/songsong/gps_imu_ws/install/_local_setup_util_ps1.py'
+[0.848s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/songsong/gps_imu_ws/install/setup.ps1'
+[0.849s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/songsong/gps_imu_ws/install/local_setup.sh'
+[0.850s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/songsong/gps_imu_ws/install/_local_setup_util_sh.py'
+[0.851s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/songsong/gps_imu_ws/install/setup.sh'
+[0.852s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/songsong/gps_imu_ws/install/local_setup.bash'
+[0.853s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/songsong/gps_imu_ws/install/setup.bash'
+[0.854s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/songsong/gps_imu_ws/install/local_setup.zsh'
+[0.854s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/songsong/gps_imu_ws/install/setup.zsh'

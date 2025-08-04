@@ -1,0 +1,36 @@
+running egg_info
+writing ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/requires.txt
+writing top-level names to ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/top_level.txt
+reading manifest file '../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying resource/gps_imu_fusion_pkg -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg
+creating /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/launch
+copying launch/robot_localization.launch.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/launch
+copying launch/gps_display.launch.py -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/launch
+creating /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/config
+copying config/ekf_global.yaml -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/config
+copying config/navsat_transform.yaml -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/config
+copying config/ekf_local.yaml -> /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/share/gps_imu_fusion_pkg/config
+running install_egg_info
+Copying ../../build/gps_imu_fusion_pkg/gps_imu_fusion_pkg.egg-info to /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/python3.10/site-packages/gps_imu_fusion_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing gps_imu_sync script to /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/gps_imu_fusion_pkg
+Installing gps_path_pub script to /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/gps_imu_fusion_pkg
+Installing gps_repub script to /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/gps_imu_fusion_pkg
+Installing gps_to_csv script to /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/gps_imu_fusion_pkg
+Installing gps_to_point script to /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/gps_imu_fusion_pkg
+Installing gps_to_web script to /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/gps_imu_fusion_pkg
+Installing gps_with_grid script to /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/gps_imu_fusion_pkg
+Installing imu_repub script to /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/gps_imu_fusion_pkg
+Installing imu_to_csv script to /home/songsong/gps_imu_ws/install/gps_imu_fusion_pkg/lib/gps_imu_fusion_pkg
+writing list of installed files to '/home/songsong/gps_imu_ws/build/gps_imu_fusion_pkg/install.log'
