@@ -219,8 +219,8 @@ void Um7Driver::publish_msgs(um7::Registers & r)
         {
           imu_msg_.orientation.w = r.quat.get_scaled(0);
           imu_msg_.orientation.x = r.quat.get_scaled(1);
-          imu_msg_.orientation.y = r.quat.get_scaled(2);
-          imu_msg_.orientation.z = r.quat.get_scaled(3);
+          imu_msg_.orientation.y = -r.quat.get_scaled(2);
+          imu_msg_.orientation.z = -r.quat.get_scaled(3);
 
           imu_msg_.angular_velocity.x = r.gyro.get_scaled(0);
           imu_msg_.angular_velocity.y = r.gyro.get_scaled(1);

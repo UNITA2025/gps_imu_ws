@@ -1,0 +1,20 @@
+navsat_transform_node:
+  ros__parameters:
+    frequency: 30.0
+    delay: 3.0
+    magnetic_declination_radians: -0.122  # 자기편각 (지역에 맞게 설정)
+    yaw_offset: 0.0
+    zero_altitude: true  # 고도를 0으로 초기화
+    broadcast_utm_transform: true
+    publish_filtered_gps: true
+    use_odometry_yaw: false
+    wait_for_datum: false
+
+    # Frame IDs
+    map_frame_id: map
+    odom_frame_id: odom
+    base_link_frame_id: base_link  # republish한 frame_id와 일치
+    utm_frame_id: utm
+
+    # 데이터 품질 설정
+    datum_service: datum

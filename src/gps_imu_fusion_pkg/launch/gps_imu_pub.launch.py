@@ -13,7 +13,7 @@ def generate_launch_description():
             executable='um7_driver',
             name='imu',
             output='screen',
-            parameters=[{'port': '/dev/ttyUSB0'}]  # arguments → parameters로 수정
+            parameters=[{'port': '/dev/ttyUSB0'}, {'tf_ned_to_enu': False}, {'orientation_in_robot_frame': False}]  # arguments → parameters로 수정
         ),
         Node(
             package='gps_imu_fusion_pkg',
