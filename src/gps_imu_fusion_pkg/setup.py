@@ -10,7 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', ['launch/robot_localization.launch.py']),
+        ('share/' + package_name + '/launch', ['launch/gps_imu_robot_localization.launch.py']),
         ('share/' + package_name + '/launch', ['launch/gps_display.launch.py']),
         ('share/' + package_name + '/launch', ['launch/gps_imu_pub.launch.py']),
         ('share/' + package_name + '/config', ['config/ekf_global.yaml']),
@@ -35,6 +35,7 @@ setup(
             f'gps_to_csv = {package_name}.gps_to_csv:main',
             f'imu_to_csv = {package_name}.imu_to_csv:main',
             f'imu_repub = {package_name}.imu_repub:main',
+            f'local_origin_setter = {package_name}.local_origin_setter:main',
         ],
     },
 )
