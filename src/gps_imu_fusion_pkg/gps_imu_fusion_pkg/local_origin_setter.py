@@ -28,7 +28,7 @@ class LocalOriginSetter(Node):
         # Global odometry subscriber
         self.global_sub = self.create_subscription(
             Odometry,
-            '/odometry/global',
+            '/odometry/global2',
             self.global_odom_callback,
             10
         )

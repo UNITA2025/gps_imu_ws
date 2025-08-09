@@ -1,6 +1,6 @@
 ekf_global:  # ← 이 부분이 빠져있었음!
   ros__parameters:
-    frequency: 100.0
+    frequency: 30.0
     sensor_timeout: 0.1
     two_d_mode: false  # 2D 모드 (Z축 고정)
     print_diagnostics: true
@@ -28,7 +28,7 @@ ekf_global:  # ← 이 부분이 빠져있었음!
     imu0_config: [false, false, false,    # 위치 사용 안함
                   true, true, true,     # 
                   false, false, false,    # 선형속도 사용 안함
-                  true, true, true,     # yaw 각속도만 사용
+                  false, false, true,     # yaw 각속도만 사용
                   false, false, false]    # 가속도 사용 안함 (중요!)
     imu0_differential: false
     imu0_relative: true

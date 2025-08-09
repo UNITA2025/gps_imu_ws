@@ -36,6 +36,7 @@ setup(
             f'imu_to_csv = {package_name}.imu_to_csv:main',
             f'imu_repub = {package_name}.imu_repub:main',
             f'local_origin_setter = {package_name}.local_origin_setter:main',
+            f'local_origin_settterr = {package_name}.local_origin_settterr:main',
         ],
     },
 )
