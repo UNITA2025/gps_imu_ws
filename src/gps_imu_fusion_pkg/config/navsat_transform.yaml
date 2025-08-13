@@ -4,6 +4,7 @@ navsat_transform:
     frequency: 100.0
     magnetic_declination_radians: -0.131  # 인천 지역 자기편각
     zero_altitude: false  # 2D 내비게이션 (고도 무시)
+    broadcast_utm_transform: True
     broadcast_cartesian_transform: true
     publish_filtered_gps: true
     use_odometry_yaw: true  # EKF 방향 사용 (권장)

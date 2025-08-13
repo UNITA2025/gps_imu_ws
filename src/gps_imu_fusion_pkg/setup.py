@@ -37,6 +37,9 @@ setup(
             f'imu_repub = {package_name}.imu_repub:main',
             f'local_origin_setter = {package_name}.local_origin_setter:main',
             f'local_origin_settterr = {package_name}.local_origin_settterr:main',
+            f'odom_to_txt = {package_name}.odom_to_txt:main',
+            f'utm_map_publisher = {package_name}.utm_map_publisher:main',
+            f'osm_map_publisher = {package_name}.osm_map_publisher:main',
         ],
     },
 )

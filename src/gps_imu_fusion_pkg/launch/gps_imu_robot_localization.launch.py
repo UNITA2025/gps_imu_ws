@@ -60,12 +60,27 @@ def generate_launch_description():
         remappings=[('odometry/filtered', '/odometry/global')]
     )
 
-    local_origin_setter_node = Node(
+    local_origin_settterr_node = Node(
         package='gps_imu_fusion_pkg',
-        executable='local_origin_setter',
-        name='local_origin_setter',
+        executable='local_origin_settterr',
+        name='local_origin_settterr',
     )
 
+    osm_map_publisher_node = Node(
+        package='gps_imu_fusion_pkg',
+        executable='osm_map_publisher',
+        name='osm_map_publisher',
+        parameters=[{
+            'osm_file': '/home/songsong/gps_imu_ws/map_imu.osm',
+            'resolution': 0.2,
+            'map_width': 500.0,
+            'map_height': 1000.0,
+            'rotation_angle': 174.0,
+            'gps_topic': '/gps/fix',
+            'map_frame': 'map',
+            'publish_rate': 1.0
+        }]
+    )
     return LaunchDescription([
         tf2_map_to_odom,
         tf2_base_to_gps,
@@ -73,4 +88,6 @@ def generate_launch_description():
         ekf_local_node,
         navsat_transform_node,
         ekf_global_node,
+        local_origin_settterr_node,
+        osm_map_publisher_node,
     ])
