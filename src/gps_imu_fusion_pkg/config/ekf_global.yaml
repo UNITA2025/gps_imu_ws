@@ -1,4 +1,4 @@
-ekf_filter_node:  # ← 이 부분이 빠져있었음!
+ekf_global:  # ← 이 부분이 빠져있었음!
   ros__parameters:
     frequency: 30.0
     sensor_timeout: 0.1
@@ -9,7 +9,7 @@ ekf_filter_node:  # ← 이 부분이 빠져있었음!
     # Frame 설정
     map_frame: map
     odom_frame: odom
-    base_link_frame: imure_link
+    base_link_frame: base_link
     world_frame: odom
 
     # GPS - 위치만 사용
@@ -26,9 +26,9 @@ ekf_filter_node:  # ← 이 부분이 빠져있었음!
     # IMU - 자세만 사용 (가속도 제외!)
     imu0: /imure/data  # 리매핑 필요: /imure/data:=/imu/datare
     imu0_config: [false, false, false,    # 위치 사용 안함
-                  true, true, true,     # yaw만 사용 (roll, pitch 끄기)
+                  true, true, true,     # 
                   false, false, false,    # 선형속도 사용 안함
-                  true, true, true,     # yaw 각속도만 사용
+                  false, false, true,     # yaw 각속도만 사용
                   false, false, false]    # 가속도 사용 안함 (중요!)
     imu0_differential: false
     imu0_relative: true
