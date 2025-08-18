@@ -1,4 +1,20 @@
 #!/usr/bin/env python3
+
+#==================================================#
+# 기능: GPS와 IMU 데이터를 0.1초 이내의 시간 와로 동기화 시켜서 fusion에 사용한다.
+# - message_filters.Subscriber를 사용해서 GPS와 IMU 메시지를 동시에 구독하여 시간차가 0.1초 이내면 같은 시각으로 취급한다.
+# - GPS와 IMU 메시지가 동기화 되면 호출하여 각각의 메시지에서 타임스탬프(header.stamp)를 초 단위로 변환하여 출력한다.
+#
+# 송신 토픽 (publish): 
+#   - 
+# 수신 토픽 (subscribe): 
+#   - /gps/fix(msg: sensor_msgs/NavSatFix), /imure/data(msg: sensor_msgs/Imu)
+#
+# TODO : 
+# 최종 수정일: 2025.08.18
+# 편집자: 
+#==================================================#
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import NavSatFix, Imu
