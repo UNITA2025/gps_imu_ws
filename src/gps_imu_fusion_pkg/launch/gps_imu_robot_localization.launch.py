@@ -10,19 +10,21 @@ def generate_launch_description():
     ekf_local_params_file = os.path.join(config_dir, 'ekf_local.yaml')
     ekf_global_params_file = os.path.join(config_dir, 'ekf_global.yaml')
     navsat_transform_params_file = os.path.join(config_dir, 'navsat_transform.yaml')
+    map_kcity = os.path.join(config_dir, 'map_kcity.osm')
+    map_inu = os.path.join(config_dir, 'map_inu.osm')
 
     tf2_map_to_odom = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='map_to_odom_publisher',
-        arguments=['0', '0', '0', '0', '0', '0', 'map', 'odom'],
+        arguments=['0', '0', '1', '0', '0', '0', 'map', 'odom'],
     )
     # IMU 좌표계 변환
     tf2_base_to_imure = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='imu_transform_publisher',
-        arguments=['0', '0', '-0.2', '0', '0', '0', 'base_link', 'imure_link'],
+        arguments=['0', '0', '0.8', '0', '0', '0', 'base_link', 'imure_link'],
     )
 
     # GPS 좌표계 변환
@@ -62,8 +64,8 @@ def generate_launch_description():
 
     local_origin_settterr_node = Node(
         package='gps_imu_fusion_pkg',
-        executable='local_origin_settterr',
-        name='local_origin_settterr',
+        executable='local_origin_setter',
+        name='local_origin_setter',
     )
 
     osm_map_publisher_node = Node(
@@ -71,10 +73,10 @@ def generate_launch_description():
         executable='osm_map_publisher',
         name='osm_map_publisher',
         parameters=[{
-            'osm_file': '/home/songsong/gps_imu_ws/map_imu.osm',
+            'osm_file': map_kcity,
             'resolution': 0.2,
             'map_width': 500.0,
-            'map_height': 1000.0,
+            'map_height': 1200.0,
             'rotation_angle': 174.0,
             'gps_topic': '/gps/fix',
             'map_frame': 'map',
