@@ -1,3 +1,15 @@
+
+#========================================================================================
+# 기능: /odometry/local_enu2의 Odometry를 구독해 Pose과 Twist(선형/각속도)를
+#       각각 pose_data.txt, twist_data.txt 저장하는 코드.
+# 동작
+# 노드 시작 시 빈 파일에 구독 시작.
+# 콜백마다 Pose(x, y, z, qx, qy, qz, qw), Twist(vx, vy, vz, wx, wy, wz) 를 로그로 출력, 파일에 저장
+# TODO : 작업 완료
+# 최종 수정일: 2025.08.18
+# 편집자 : 송준상, 이다빈
+#========================================================================================
+
 import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Odometry

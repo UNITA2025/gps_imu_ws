@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 
+#========================================================================================
+# 기능: OSM(XML)을 파싱해 도로/장애물을 로컬 평면(미터)로 투영, OccupancyGrid로 변환해 /map으로 주기 발행.
+# 동작: use_gps_center면 첫 NavSatFix로 기준 위경도 결정 →  모든 node/way 파싱 →  equirectangular 투영(+옵션 회전)
+#       →  도로는 두껍게, 장애물 외곽선은 occupied(100)로 그려 그리드 구성 →  헤더/원점 설정 후 퍼블리시.
+# TODO : 
+# 최종 수정일: 2025.08.18
+# 편집자 : 송준상, 이다빈
+#========================================================================================
+
 import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import OccupancyGrid
