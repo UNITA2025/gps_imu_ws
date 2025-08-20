@@ -1,3 +1,1 @@
-rm -rf install
-rm -rf build
-rm -rf log
+rm -rf install/ build/ log/
