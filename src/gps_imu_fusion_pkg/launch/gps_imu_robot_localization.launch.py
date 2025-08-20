@@ -34,6 +34,7 @@ def generate_launch_description():
     navsat_transform_params_file = os.path.join(config_dir, 'navsat_transform.yaml')
     map_kcity = os.path.join(config_dir, 'map_kcity.osm')
     map_inu = os.path.join(config_dir, 'map_inu.osm')
+    map_inu2 = os.path.join(config_dir, 'map_inu2.osm')
 
     # OSM 맵 좌표계를 odom 좌표계로 변환하는 노드
     tf2_map_to_odom = Node(
@@ -97,7 +98,7 @@ def generate_launch_description():
         executable='osm_map_publisher',
         name='osm_map_publisher',
         parameters=[{
-            'osm_file': map_kcity, # OSM 파일 주소
+            'osm_file': map_inu2, # OSM 파일 주소
             'resolution': 0.2,  # 맵 해상도 (m/pixel)
             'map_width': 500.0, # 맵 너비 (m)
             'map_height': 1200.0, # 맵 높이 (m)

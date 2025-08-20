@@ -68,7 +68,6 @@ class LocalOriginSetter(Node):
             self.origin_y = msg.pose.pose.position.y
             self.origin_z = msg.pose.pose.position.z
             self.origin_set = True
-            
             self.get_logger().info(f'🎯 Origin set to: ({self.origin_x:.2f}, {self.origin_y:.2f}, {self.origin_z:.2f})')
         
         # 원점 기준으로 상대 좌표 계산
@@ -152,10 +151,10 @@ class LocalOriginSetter(Node):
                     # Heading 재보정 수행
                     self.recalibrate_heading(start_pos, end_pos, msg)
                     self.last_calibration_pos = end_pos
-                else:
-                    self.get_logger().info(f'⏸️  Too close to last calibration point, skipping...')
-            else:
-                self.get_logger().info(f'⏸️  Distance too short for calibration')
+                # else:
+                    # self.get_logger().info(f'⏸️  Too close to last calibration point, skipping...')
+            # else:
+                # self.get_logger().info(f'⏸️  Distance too short for calibration')
                     
     def is_straight_trajectory(self):
         """현재 trajectory가 직진인지 판단"""
@@ -234,10 +233,10 @@ class LocalOriginSetter(Node):
                 (1 - alpha) * self.heading_offset + alpha * new_offset
             )
             
-            self.get_logger().info(f'🧭 Heading recalibrated! New offset: {math.degrees(self.heading_offset):.1f}°')
-            self.get_logger().info(f'📏 Straight distance: {math.sqrt(dx*dx + dy*dy):.1f}m')
-        else:
-            self.get_logger().warn(f'⚠️  Large heading change detected ({math.degrees(new_offset - self.heading_offset):.1f}°), ignoring...')
+            # self.get_logger().info(f'🧭 Heading recalibrated! New offset: {math.degrees(self.heading_offset):.1f}°')
+            # self.get_logger().info(f'📏 Straight distance: {math.sqrt(dx*dx + dy*dy):.1f}m')
+        # else:
+        #     self.get_logger().warn(f'⚠️  Large heading change detected ({math.degrees(new_offset - self.heading_offset):.1f}°), ignoring...')
         
     def normalize_angle(self, angle):
         """각도를 -π ~ π 범위로 정규화"""
