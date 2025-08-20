@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
 
+#========================================================================================
+# 기능 : /odometry/global을 받아 최초 좌표를 원점으로 삼아 /odometry/local_enu를 발행하고,
+# “최근 이동 궤적이 직선일 때” 이동 방향을 기준으로 heading_offset을 추정·누적 적용해 Yaw를 자동 보정해주는 코드
+# 동작 
+# /odometry/global을 구독하여 첫 위치를 원점(0,0,0)으로 설정한 뒤,
+# 로컬 ENU 좌표계로 변환된 /odometry/local_enu를 발행.
+# 최근 이동 궤적이 직선으로 감지되면 실제 진행 방향을 기준으로 IMU yaw를 보정하여
+# 주행 시 발생하는 heading 드리프트를 완화.
+# TODO : 
+# 최종 수정일: 2025.08.18
+# 편집자 : 송준상, 이다빈
+#========================================================================================
+
 import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
@@ -212,7 +225,7 @@ class LocalOriginSetter(Node):
         new_offset = self.normalize_angle(new_offset)
         
         # 급격한 변화는 제한 (노이즈 방지)
-        max_offset_change = math.radians(150.0)  # 최대 15도 변화만 허용
+        max_offset_change = math.radians(150.0)  # 최대 150도 변화만 허용
         
         if abs(self.normalize_angle(new_offset - self.heading_offset)) < max_offset_change:
             # 기존 오프셋과 새 오프셋의 가중평균 (부드러운 보정)
