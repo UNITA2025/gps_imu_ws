@@ -17,6 +17,7 @@ setup(
         ('share/' + package_name + '/config', ['config/ekf_local.yaml']),
         ('share/' + package_name + '/config', ['config/map_kcity.osm']),
         ('share/' + package_name + '/config', ['config/map_inu.osm']),
+        ('share/' + package_name + '/config', ['config/map_inu2.osm']),
         
     ],
     install_requires=['setuptools'],
