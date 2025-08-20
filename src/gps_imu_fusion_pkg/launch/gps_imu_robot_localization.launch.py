@@ -10,8 +10,8 @@
 #   - robot_localization ekf_node (ekf_local)
 #   - robot_localization navsat_transform_node (navsat_transform)
 #   - robot_localization ekf_node (ekf_global)
-#   - gps_imu_fusion_pkg local_origin_setter
-#   - gps_imu_fusion_pkg osm_map_publisher
+#   - gps_imu_fusion_pkg local_origin_setter (5초 지연)
+#   - gps_imu_fusion_pkg osm_map_publisher (10초 지연)
 
 # TODO : 작업 완료
 #
@@ -19,10 +19,10 @@
 # 편집자: 송준상, 이다빈, 신민규
 #=====================================================#
 
-
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
+from launch.actions import TimerAction
 from launch_ros.actions import Node
 
 def generate_launch_description():
@@ -43,6 +43,7 @@ def generate_launch_description():
         name='map_to_odom_publisher',
         arguments=['0', '0', '0', '0', '0', '0', 'map', 'odom'],
     )
+
     # IMU 좌표계 변환
     tf2_base_to_imure = Node(
         package='tf2_ros',
@@ -59,17 +60,16 @@ def generate_launch_description():
         arguments=['0', '0', '1', '0', '0', '0', 'base_link', 'gps'],
     )
 
-    #local_ekf only IMU
+    # local_ekf only IMU
     ekf_local_node = Node(
         package='robot_localization',
         executable='ekf_node',
         name='ekf_local',
         output='screen',
-        # YAML 파일 경로를 parameters에 바로 넣어줍니다.
         parameters=[ekf_local_params_file]
     )
 
-    #navsat for gps
+    # navsat for gps
     navsat_transform_node = Node(
         package='robot_localization',
         executable='navsat_transform_node',
@@ -77,7 +77,7 @@ def generate_launch_description():
         parameters=[navsat_transform_params_file],
     )
 
-    #global ekf IMU + GPS
+    # global ekf IMU + GPS
     ekf_global_node = Node(
         package='robot_localization',
         executable='ekf_node',
@@ -86,13 +86,20 @@ def generate_launch_description():
         remappings=[('odometry/filtered', '/odometry/global')]
     )
 
-    #글로벌 좌표를 로컬좌표(0,0)으로 변경하고 헤딩을 실시간 보정해주는 노드
+    # 글로벌 좌표를 로컬좌표(0,0)으로 변경하고 헤딩을 실시간 보정해주는 노드 (5초 지연)
     local_origin_setter_node = Node(
         package='gps_imu_fusion_pkg',
         executable='local_origin_setter',
         name='local_origin_setter',
     )
 
+    # local_origin_setter를 3초 후에 실행
+    delayed_local_origin_setter = TimerAction(
+        period=3.0,  # 5초 지연
+        actions=[local_origin_setter_node]
+    )
+
+    # OSM 지도 발행 노드
     osm_map_publisher_node = Node(
         package='gps_imu_fusion_pkg',
         executable='osm_map_publisher',
@@ -109,6 +116,12 @@ def generate_launch_description():
         }]
     )
 
+    # osm_map_publisher를 5초 후에 실행
+    delayed_osm_map_publisher = TimerAction(
+        period=5.0,  # 5초 지연
+        actions=[osm_map_publisher_node]
+    )
+
     return LaunchDescription([
         tf2_map_to_odom,
         tf2_base_to_gps,
@@ -116,6 +129,6 @@ def generate_launch_description():
         ekf_local_node,
         navsat_transform_node,
         ekf_global_node,
-        local_origin_setter_node,
-        osm_map_publisher_node,
+        delayed_local_origin_setter,    # 3초 후 실행
+        delayed_osm_map_publisher,      # 5초 후 실행
     ])
