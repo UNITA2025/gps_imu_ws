@@ -49,7 +49,7 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         name='imu_transform_publisher',
-        arguments=['0', '0', '0.8', '0', '0', '0', 'base_link', 'imure_link'],
+        arguments=['0', '0', '1.18', '0', '0', '0', 'base_link', 'imure_link'],
     )
 
     # GPS 좌표계 변환
@@ -57,7 +57,7 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         name='gps_transform_publisher',
-        arguments=['0', '0', '1', '0', '0', '0', 'base_link', 'gps'],
+        arguments=['0', '0', '1.38', '0', '0', '0', 'base_link', 'gps'],
     )
 
     # local_ekf only IMU
