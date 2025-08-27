@@ -93,9 +93,9 @@ class LocalOriginSetter(Node):
         local_odom.child_frame_id = msg.child_frame_id
         
         # 위치 설정
-        local_odom.pose.pose.position.x = local_x
-        local_odom.pose.pose.position.y = local_y
-        local_odom.pose.pose.position.z = local_z
+        local_odom.pose.pose.position.x = msg.pose.pose.position.x
+        local_odom.pose.pose.position.y = msg.pose.pose.position.y
+        local_odom.pose.pose.position.z = msg.pose.pose.position.z
         
         # Heading 보정 적용
         corrected_orientation = self.apply_heading_correction(msg.pose.pose.orientation)
