@@ -18,7 +18,7 @@ setup(
         ('share/' + package_name + '/config', ['config/map_kcity.osm']),
         ('share/' + package_name + '/config', ['config/map_inu.osm']),
         ('share/' + package_name + '/config', ['config/map_inu2.osm']),
-        
+
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -35,6 +35,7 @@ setup(
             f'local_origin_setter = {package_name}.local_origin_setter:main',
             f'odom_to_txt = {package_name}.odom_to_txt:main',
             f'osm_map_publisher = {package_name}.osm_map_publisher:main',
+            f'udp_to_gps_imu = {package_name}.udp_to_gps_imu:main',
         ],
     },
 )
