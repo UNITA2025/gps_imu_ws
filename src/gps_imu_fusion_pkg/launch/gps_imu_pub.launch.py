@@ -44,9 +44,20 @@ def generate_launch_description():
     ublox_gps_node = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
             get_package_share_directory('ublox_gps'),
-            '/launch/ublox_gps_node_base-launch.py'
+            '/launch/ublox_gps_node-launch.py'
         ]),
     )
+    # ntrip-rtcm 활성화 노드
+    ntrip_client_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory('ntrip_client'),
+                'launch',
+                'ntrip_client_launch.py'
+            )
+        )
+    )
+
     # GPS 재발행 노드
     gps_repub_node = Node(
         package='gps_imu_fusion_pkg',
@@ -63,6 +74,7 @@ def generate_launch_description():
         um7_driver_node,
         imu_repub_node,
         ublox_gps_node,
+        ntrip_client_launch,
         gps_repub_node,
         gps_imu_sync
     ])
