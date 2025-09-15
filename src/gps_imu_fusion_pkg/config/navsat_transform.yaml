@@ -10,9 +10,9 @@ navsat_transform:
   # 편집자 : 송준상, 이다빈
   # =================================================================================================================
   ros__parameters:
-    frequency: 100.0
+    frequency: 5.0
     magnetic_declination_radians: -0.131  # 자기편각
-    zero_altitude: false  # 2D 내비게이션 (고도 무시)
+    zero_altitude: True  # 2D 내비게이션 (고도 무시)
     broadcast_utm_transform: True
     broadcast_cartesian_transform: true
     publish_filtered_gps: true

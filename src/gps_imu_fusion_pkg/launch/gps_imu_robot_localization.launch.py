@@ -41,7 +41,7 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         name='map_to_odom_publisher',
-        arguments=['0', '0', '0', '0', '0', '0', 'map', 'odom'],
+        arguments=['0', '0', '0',  '-0.57578', '0', '0',  'map', 'odom'],
     )
 
     # IMU 좌표계 변환
@@ -49,7 +49,7 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         name='imu_transform_publisher',
-        arguments=['0', '0', '1.18', '0', '0', '0', 'base_link', 'imure_link'],
+        arguments=['0', '0', '1.18', '-1.818702', '0', '0', 'base_link', 'imure_link'],
     )
 
     # GPS 좌표계 변환
@@ -58,6 +58,13 @@ def generate_launch_description():
         executable='static_transform_publisher',
         name='gps_transform_publisher',
         arguments=['0', '0', '1.38', '0', '0', '0', 'base_link', 'gps'],
+    )
+
+    tf2_base_to_odom = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='gps_transform_publisher',
+        arguments=['0', '0', '0', '0', '0', '-20.778461', 'odom', 'base_link'],
     )
 
     # local_ekf only IMU
@@ -77,6 +84,11 @@ def generate_launch_description():
         parameters=[navsat_transform_params_file],
     )
 
+    delayed_ekf_local_node = TimerAction(
+        period = 1.0,
+        actions=[ekf_local_node]
+    )
+
     # global ekf IMU + GPS
     ekf_global_node = Node(
         package='robot_localization',
@@ -86,7 +98,7 @@ def generate_launch_description():
         remappings=[('odometry/filtered', '/odometry/global')]
     )
 
-    # 글로벌 좌표를 로컬좌표(0,0)으로 변경하고 헤딩을 실시간 보정해주는 노드 (5초 지연)
+    # 글로벌 좌표를 헤딩을 실시간 보정해주는 노드 (5초 지연)
     local_origin_setter_node = Node(
         package='gps_imu_fusion_pkg',
         executable='local_origin_setter',
@@ -105,7 +117,7 @@ def generate_launch_description():
         executable='osm_map_publisher',
         name='osm_map_publisher',
         parameters=[{
-            'osm_file': map_inu2, # OSM 파일 주소
+            'osm_file': map_kcity, # OSM 파일 주소
             'resolution': 0.2,  # 맵 해상도 (m/pixel)
             'map_width': 500.0, # 맵 너비 (m)
             'map_height': 1200.0, # 맵 높이 (m)
@@ -126,8 +138,11 @@ def generate_launch_description():
         tf2_map_to_odom,
         tf2_base_to_gps,
         tf2_base_to_imure,
-        ekf_local_node,
+        # tf2_base_to_odom,
+        # ekf_local_node,
         navsat_transform_node,
+        delayed_ekf_local_node,
+        # delayed_navsat_transform_node,
         ekf_global_node,
         delayed_local_origin_setter,    # 3초 후 실행
         delayed_osm_map_publisher,      # 5초 후 실행

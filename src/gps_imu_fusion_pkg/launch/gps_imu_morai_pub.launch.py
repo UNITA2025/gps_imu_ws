@@ -24,6 +24,13 @@ from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
+    # morai udp to topic
+    moari_udp_to_gps_imu_node = Node (
+        package='gps_imu_fusion_pkg',
+        executable='udp_to_gps_imu',
+        name='udp_to_gps_imu',
+        output='screen'
+    )
     # UM7 드라이버 노드
     um7_driver_node = Node(
         package='umx_driver',
@@ -47,23 +54,12 @@ def generate_launch_description():
             '/launch/ublox_gps_node-launch.py'
         ]),
     )
-    # ntrip-rtcm 활성화 노드
-    ntrip_client_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(
-                get_package_share_directory('ntrip_client'),
-                'launch',
-                'ntrip_client_launch.py'
-            )
-        )
-    )
-
     # GPS 재발행 노드
     gps_repub_node = Node(
         package='gps_imu_fusion_pkg',
         executable='gps_repub',
         name='gps_repub',
-        parameters=[{'gps_topic':'/ublox_gps_node/fix'},
+        parameters=[{'gps_topic':'/morai/fix'},
                     ]
     )
     # GPS와 IMU 싱크 맞는지 확인하는 노드
@@ -73,10 +69,10 @@ def generate_launch_description():
         name='gps_imu_sync'
     )
     return LaunchDescription([
-        um7_driver_node,
+        moari_udp_to_gps_imu_node,
+        # um7_driver_node,
         imu_repub_node,
-        ublox_gps_node,
-        # ntrip_client_launch,
+        #ublox_gps_node,
         gps_repub_node,
         gps_imu_sync
     ])

@@ -29,7 +29,7 @@ class OdometryLogger(Node):
         # /odometry/global 토픽 구독
         self.subscription = self.create_subscription(
             Odometry,
-            '/odometry/local_enu2',
+            '/odometry/local_enu',
             self.odometry_callback,
             10  # QoS history depth
         )

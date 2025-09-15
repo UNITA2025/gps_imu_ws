@@ -12,6 +12,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/gps_imu_robot_localization.launch.py']),
         ('share/' + package_name + '/launch', ['launch/gps_imu_pub.launch.py']),
+        ('share/' + package_name + '/launch', ['launch/gps_imu_morai_pub.launch.py']),
         ('share/' + package_name + '/config', ['config/ekf_global.yaml']),
         ('share/' + package_name + '/config', ['config/navsat_transform.yaml']),
         ('share/' + package_name + '/config', ['config/ekf_local.yaml']),
@@ -36,6 +37,8 @@ setup(
             f'odom_to_txt = {package_name}.odom_to_txt:main',
             f'osm_map_publisher = {package_name}.osm_map_publisher:main',
             f'udp_to_gps_imu = {package_name}.udp_to_gps_imu:main',
+            f'map_odom_init = {package_name}.map_odom_init:main',
+            f'yaw_bias_cal = {package_name}.yaw_bias_cal:main',
         ],
     },
 )

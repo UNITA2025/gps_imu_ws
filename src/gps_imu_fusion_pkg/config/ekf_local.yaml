@@ -7,10 +7,11 @@ ekf_local:
   # 편집자 : 송준상, 이다빈
   # =================================================================================================================
   ros__parameters:
-    frequency: 100.0
-    sensor_timeout: 0.1
+    frequency: 30.0
+    sensor_timeout: 0.5
     two_d_mode: false  # 2D 모드 (z축 고정)
     print_diagnostics: true
+    predict_to_current_time: true
     debug: false
 
   # Frame 설정
@@ -20,17 +21,17 @@ ekf_local:
     world_frame: odom
   # ----------------------------------------------------------------
   # IMU - 자세, 각속도 사용
-    imu0: /imure/data 
+    imu0: /imure/data
     imu0_config: [false, false, false,   # 위치 : x, y, z 사용 안함
-                   true,  true,  true,   # 자세 : yaw, roll, pitch 사용 
-                   false, false, false,  # 선형속도 : vx, vy, vz, vroll 사용 안함
-                   true,  true,  true,   # 각속도 : vroll, vpitch, vyaw 사용
+                   true, true, true,   # 자세 : yaw, roll, pitch 사용 
+                   false, false, false,     # 선형속도 : vx, vy, vz, vroll 사용 안함
+                   true, true, true,   # 각속도 : vroll, vpitch, vyaw 사용
                    false, false, false]  # 가속도 : ax, ay, az 사용 안함
     imu0_differential: false
-    imu0_relative: true
+    imu0_relative: false
     imu0_remove_gravitational_acceleration: true
-    imu0_queue_size: 10
-    imu0_nodelay: false
+    imu0_queue_size: 50
+    imu0_nodelay: true
   # ----------------------------------------------------------------
   # 프로세스 노이즈 공분산 행렬 (Process Noise Covariance)
   # 이 행렬은 '예측' 단계의 불확실성을 정의.

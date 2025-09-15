@@ -23,8 +23,11 @@ class GPSTimestampRepublisher(Node):
     def __init__(self):
         super().__init__('gps_repub')
 
+        self.declare_parameter('gps_topic', '/qwer/fix')  # GPS 토픽 이름
+        self.gps_topic = self.get_parameter('gps_topic').get_parameter_value().string_value
+
         # 원래 GPS 토픽 구독 (드라이버가 퍼블리시하는 토픽)
-        self.sub = self.create_subscription(NavSatFix, '/fix', self.callback, 10)  # queue_size
+        self.sub = self.create_subscription(NavSatFix, self.gps_topic, self.callback, 10)  # queue_size
 
         # 보정 후 퍼블리시할 토픽
         self.pub = self.create_publisher(NavSatFix, '/gps/fix', 10)

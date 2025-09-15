@@ -10,10 +10,11 @@ ekf_global:
   # =================================================================================================================
   ros__parameters:
     frequency: 30.0
-    sensor_timeout: 0.1
-    two_d_mode: false  # 2D 모드 (Z축 고정)
+    sensor_timeout: 0.5
+    two_d_mode: true  # 2D 모드 (Z축 고정)
     print_diagnostics: true
     debug: false
+    predict_to_current_time: true
 
     # Frame 설정
     map_frame: map     # 지도 좌표계 (절대적인 기준)
@@ -25,7 +26,7 @@ ekf_global:
   # GPS - 위치만 사용
     odom0: /odometry/gps
     # [x, y, z, roll, pitch, yaw, vx, vy, vz, vroll, vpitch, vyaw, ax, ay, az]
-    odom0_config: [true,  true,  true,   # 위치 : x, y, z 사용
+    odom0_config: [true,  true,  false,   # 위치 : x, y, z 사용
                    false, false, false,  # 자세 : yaw, roll, pitch 사용 안함
                    false, false, false,  # 선형속도 : vx, vy, vz, vroll 사용 안함
                    false, false, false,  # 각속도 : vroll, vpitch, vyaw 사용 안함
@@ -44,10 +45,10 @@ ekf_global:
                   false, false, true,   # 각속도 : vroll, vpitch 사용 안함, vyaw 만 사용
                   false, false, false]  # 가속도 : ax, ay, az 사용 안함
     imu0_differential: false
-    imu0_relative: true
+    imu0_relative: false
     imu0_remove_gravitational_acceleration: true
-    imu0_queue_size: 10
-    
+    imu0_queue_size: 50
+    imu0_nodelay: true
   # ----------------------------------------------------------------
   # 프로세스 노이즈 공분산 행렬 (Process Noise Covariance)
   # 이 행렬은 '예측' 단계의 불확실성을 정의합니다.

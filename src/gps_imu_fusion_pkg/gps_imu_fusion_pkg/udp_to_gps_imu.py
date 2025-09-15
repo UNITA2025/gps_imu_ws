@@ -8,10 +8,224 @@ from std_msgs.msg import Header
 import threading
 import time
 import math
+import socket
+from threading import Thread, Event
+import pynmea2
 
 # GPS와 IMU 처리 클래스 import
-from GPSprocess import GPSConnector
-from IMUprocess import IMUConnector, IMUINFO
+import struct
+
+
+class GPSConnector:
+  def __init__(self, network_type): 
+    self.gpsClient = None
+    self.networkType = network_type
+    self.connChk = False        
+    self.recvChk = False
+    self.event = Event()
+
+    self.pos_x = 126.773287
+    self.pos_y = 37.229319
+  
+  def __del__(self):
+    print('gps_del')
+
+  def connect(self, host, port, topic):
+    if self.networkType == 'UDP':
+      try:
+        self.gpsClient = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self.gpsClient.setblocking(False)
+        self.gpsClient.settimeout(1)
+        self.gpsClient.bind((host,port))       
+
+        self.gpsRecvThread = Thread(target = self.position, args=())
+        self.gpsRecvThread.setDaemon(True)
+        self.gpsRecvThread.start()
+
+      except Exception as e:
+        print(f'gps_connect :{e}')
+        
+    else:
+        from morai_msgs.msg import GPSMessage
+        import rospy   
+        self.gpsClient = rospy.Subscriber(topic ,GPSMessage, self.gpsCB)
+        try:
+          rospy.wait_for_message(topic,GPSMessage,timeout=1)
+        except rospy.exceptions.ROSException:
+          pass
+
+    self.connChk = True
+
+  def gpsCB(self,data):    
+    self.pos_x = data.longitude
+    self.pos_y = data.latitude
+    self.recvChk = True
+
+  def disconnect(self):
+    if self.networkType == 'UDP':
+      if self.connChk:
+        self.connChk = False
+        if self.gpsRecvThread.is_alive():
+          self.event.set()
+          self.gpsRecvThread.join()
+        self.gpsClient.close()
+      
+    else:
+      self.gpsClient.unregister()
+    
+
+  def position(self):
+    while True:
+      try:
+        if self.event.is_set():
+          break
+        datas, host = self.gpsClient.recvfrom(8196)
+        asciiDatas = datas.decode('ascii')
+        gpdatas = asciiDatas.split('\r\n')
+        
+        gpgga = pynmea2.parse(gpdatas[0])
+
+        lats = gpgga.latitude
+        longs = gpgga.longitude
+        self.pos_y = lats
+        self.pos_x = longs #longitude is negaitve
+
+        self.recvChk = True
+
+      except socket.timeout:
+        if self.recvChk:
+          continue
+        else:
+          self.recvChk = False
+          break
+      except Exception as e:
+        print(f'gps_poistion : {e}')
+
+
+  def getPose(self):
+    return (self.pos_x, self.pos_y)
+
+class IMUConnector:
+  def __init__(self, network_type):
+    self.imuClient = None    
+    self.networkType = network_type
+    self.connChk = False
+    self.recvChk = False
+    self.event = Event()
+
+    self.imu_data = IMUINFO()
+  
+  def __del__(self):
+    print('imu_del')
+
+  def connect(self, host, port, topic):
+    if self.networkType == 'UDP':
+      try:
+        self.imuClient = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self.imuClient.setblocking(False)
+        self.imuClient.settimeout(1)
+        self.imuClient.bind((host,port))        
+
+        self.imuRecvThread = Thread(target = self.imu, args=())
+        self.imuRecvThread.daemon = True 
+        self.imuRecvThread.start()
+
+      except Exception as e:
+        print(f'imu_connect : {e}')
+
+    else:
+        import rospy
+        from sensor_msgs.msg import Imu
+        self.imuClient = rospy.Subscriber(topic,Imu,self.imuCB)
+        try:
+          rospy.wait_for_message(topic,Imu,timeout=1)
+        except rospy.exceptions.ROSException:
+          pass
+
+    self.connChk = True
+          
+
+  def imuCB(self,data):
+    self.imu_data.orientation_x = data.orientation.x
+    self.imu_data.orientation_y = data.orientation.y
+    self.imu_data.orientation_z = data.orientation.z
+    self.imu_data.orientation_w = data.orientation.w
+    self.imu_data.angular_velocity_x = data.angular_velocity.x
+    self.imu_data.angular_velocity_y = data.angular_velocity.y
+    self.imu_data.angular_velocity_z = data.angular_velocity.z
+    self.imu_data.linear_acceleration_x = data.linear_acceleration.x
+    self.imu_data.linear_acceleration_y = data.linear_acceleration.y
+    self.imu_data.linear_acceleration_z = data.linear_acceleration.z
+
+    self.recvChk = True
+  
+  def disconnect(self):
+    if self.networkType == 'UDP':
+      if self.connChk:
+        self.connChk = False
+        if self.imuRecvThread.is_alive():
+          self.event.set()
+          self.imuRecvThread.join()
+        self.imuClient.close()
+    else:
+      self.imuClient.unregister()
+      self.imuClient = None
+
+  def imu(self):    
+    while True:
+      try:
+        if self.event.is_set():
+          break
+        raw_data, sender = self.imuClient.recvfrom(65535)
+        header = raw_data[0:9].decode()
+        if header == '#IMUData$':
+            
+            data_length = struct.unpack('i', raw_data[9:13])
+            data = struct.unpack('10d', raw_data[33:113])
+            self.imu_data.orientation_x = data[1]
+            self.imu_data.orientation_y = data[2]
+            self.imu_data.orientation_z = data[3]
+            self.imu_data.orientation_w = data[0]
+            self.imu_data.angular_velocity_x = data[4]
+            self.imu_data.angular_velocity_y = data[5]
+            self.imu_data.angular_velocity_z = data[6]
+            self.imu_data.linear_acceleration_x = data[7]
+            self.imu_data.linear_acceleration_y = data[8]
+            self.imu_data.linear_acceleration_z = data[9]
+            
+            self.recvChk = True
+
+      except socket.timeout:
+        if self.recvChk:
+          continue
+        else:
+          self.recvChk = False
+          break
+      except Exception as e:
+        print(f'imu_data :{e}')
+      
+  def getIMU(self):
+    return self.imu_data
+
+class IMUINFO :
+  def __init__(self):
+    self.orientation_x = None
+    self.orientation_y = None
+    self.orientation_z = None
+    self.orientation_w = None
+    self.angular_velocity_x = None
+    self.angular_velocity_y = None
+    self.angular_velocity_z = None
+    self.linear_acceleration_x = None
+    self.linear_acceleration_y = None
+    self.linear_acceleration_z = None 
+
+
+
+  def getIMU(self):
+    return self.imu_data
+  
+
 
 
 class UDPToROS2Publisher(Node):
@@ -19,8 +233,8 @@ class UDPToROS2Publisher(Node):
         super().__init__('udp_to_ros2_publisher')
 
         # ROS2 Publishers
-        self.gps_pub = self.create_publisher(NavSatFix, '/gps/fix', 10)
-        self.imu_pub = self.create_publisher(Imu, '/imure/data', 10)
+        self.gps_pub = self.create_publisher(NavSatFix, '/morai/fix', 10)
+        self.imu_pub = self.create_publisher(Imu, '/imu/data', 10)
 
         # GPS와 IMU Connectors
         self.gps_connector = GPSConnector('UDP')
@@ -39,8 +253,8 @@ class UDPToROS2Publisher(Node):
         self.initialize_connections()
 
         self.get_logger().info("UDP to ROS2 Publisher started")
-        self.get_logger().info(f"GPS: {self.gps_host}:{self.gps_port} -> /gps/fix")
-        self.get_logger().info(f"IMU: {self.imu_host}:{self.imu_port} -> /imure/data")
+        self.get_logger().info(f"GPS: {self.gps_host}:{self.gps_port} -> /fix")
+        self.get_logger().info(f"IMU: {self.imu_host}:{self.imu_port} -> /imu/data")
 
     def initialize_connections(self):
         """UDP 연결 초기화"""
@@ -82,7 +296,7 @@ class UDPToROS2Publisher(Node):
             # Header 설정
             gps_msg.header = Header()
             gps_msg.header.stamp = timestamp
-            gps_msg.header.frame_id = 'gps_link'
+            gps_msg.header.frame_id = 'gps'
 
             # GPS 데이터 설정
             gps_msg.latitude = pos_y
@@ -123,7 +337,7 @@ class UDPToROS2Publisher(Node):
             # Header 설정
             imu_msg.header = Header()
             imu_msg.header.stamp = timestamp
-            imu_msg.header.frame_id = 'imure_link'
+            imu_msg.header.frame_id = 'imu_link'
 
             # Orientation (quaternion) 설정
             if all(val is not None for val in [imu_data.orientation_x, imu_data.orientation_y,
