@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#========================================================================================
+#=======================================================================================
 # 기능 : /odometry/global을 받아 최초 좌표를 원점으로 삼아 /odometry/local_enu를 발행하고,
 # “최근 이동 궤적이 직선일 때” 이동 방향을 기준으로 heading_offset을 추정·누적 적용해 Yaw를 자동 보정해주는 코드
 # 동작 
@@ -117,9 +117,10 @@ class LocalOriginSetter(Node):
                 start_pos = self.current_trajectory[0]
                 end_pos = self.current_trajectory[-1]
                 distance = math.sqrt((end_pos[0] - start_pos[0])**2 + (end_pos[1] - start_pos[1])**2)
-                self.get_logger().info(f'📍 Local coords: x={local_x:.2f}, y={local_y:.2f} | Heading offset: {math.degrees(self.heading_offset):.1f}° | Traj: {trajectory_len} pts, {distance:.1f}m, Straight: {is_straight}')
+                # self.get_logger().info(f'📍 Local coords: x={local_x:.2f}, y={local_y:.2f} | Heading offset: {math.degrees(self.heading_offset):.1f}° | Traj: {trajectory_len} pts, {distance:.1f}m, Straight: {is_straight}')
             else:
-                self.get_logger().info(f'📍 Local coords: x={local_x:.2f}, y={local_y:.2f} | Heading offset: {math.degrees(self.heading_offset):.1f}° | Traj: {trajectory_len} pts')
+                self.get_logger().info("test")
+                # self.get_logger().info(f'📍 Local coords: x={local_x:.2f}, y={local_y:.2f} | Heading offset: {math.degrees(self.heading_offset):.1f}° | Traj: {trajectory_len} pts')
         
     def check_and_recalibrate_heading(self, msg):
         """직진 구간을 감지하고 heading을 재보정"""
@@ -139,12 +140,12 @@ class LocalOriginSetter(Node):
                 (end_pos[1] - start_pos[1])**2
             )
             
-            self.get_logger().info(f'🔍 Straight detected! Distance: {distance:.2f}m (need: {self.min_straight_distance:.1f}m)')
+            # self.get_logger().info(f'🔍 Straight detected! Distance: {distance:.2f}m (need: {self.min_straight_distance:.1f}m)')
             
             if distance >= self.min_straight_distance:
                 # 마지막 캘리브레이션 위치와 충분히 떨어져 있는지 확인
                 dist_from_last = self.distance_from_last_calibration(end_pos)
-                self.get_logger().info(f'🔍 Distance from last calibration: {dist_from_last:.2f}m')
+                # self.get_logger().info(f'🔍 Distance from last calibration: {dist_from_last:.2f}m')
                 
                 if (self.last_calibration_pos is None or dist_from_last > self.min_calibration_distance):
                     
@@ -192,8 +193,8 @@ class LocalOriginSetter(Node):
         is_straight = max_deviation < math.radians(self.max_direction_deviation)
         
         # 디버깅 정보 (가끔씩만)
-        if len(self.current_trajectory) >= 5 and self.get_clock().now().nanoseconds % 2000000000 < 100000000:
-            self.get_logger().info(f'🔍 Trajectory analysis: max_dev={math.degrees(max_deviation):.1f}°, deviations={deviations}, straight={is_straight}')
+        # if len(self.current_trajectory) >= 5 and self.get_clock().now().nanoseconds % 2000000000 < 100000000:
+        #     self.get_logger().info(f'🔍 Trajectory analysis: max_dev={math.degrees(max_deviation):.1f}°, deviations={deviations}, straight={is_straight}')
         
         return is_straight
         
