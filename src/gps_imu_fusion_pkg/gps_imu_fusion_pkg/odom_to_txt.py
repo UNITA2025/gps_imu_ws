@@ -1,11 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 #========================================================================================
 # 기능: /odometry/local_enu2의 Odometry를 구독해 Pose과 Twist(선형/각속도)를
 #       각각 pose_data.txt, twist_data.txt 저장하는 코드.
+#       (전진/후진 방향 정보 추가됨)
 # 동작
 # 노드 시작 시 빈 파일에 구독 시작.
-# 콜백마다 Pose(x, y, z, qx, qy, qz, qw), Twist(vx, vy, vz, wx, wy, wz) 를 로그로 출력, 파일에 저장
-# TODO : 작업 완료
+# 콜백마다 Pose(x, y, z, qx, qy, qz, qw), Twist(vx, vy, vz, wx, wy, wz) 와
+# 방향 정보를 로그로 출력, 파일에 저장.
 # 최종 수정일: 2025.08.18
 # 편집자 : 송준상, 이다빈
 #========================================================================================
@@ -23,13 +26,16 @@ class OdometryLogger(Node):
         self.twist_file = twist_file
         
         # 파일 초기화 (기존 내용 삭제)
-        open(self.pose_file, 'w').close()
-        open(self.twist_file, 'w').close()
+        # 헤더를 추가하여 데이터의 의미를 명확하게 함
+        with open(self.pose_file, 'w') as f:
+            f.write("x y z qx qy qz qw direction\n")
+        with open(self.twist_file, 'w') as f:
+            f.write("vx vy vz wx wy wz direction\n")
         
         # /odometry/global 토픽 구독
         self.subscription = self.create_subscription(
             Odometry,
-            '/odometry/local_enu',
+            '/odometry/local_enu2',
             self.odometry_callback,
             10  # QoS history depth
         )
@@ -54,20 +60,21 @@ class OdometryLogger(Node):
         angular_y = msg.twist.twist.angular.y
         angular_z = msg.twist.twist.angular.z
         
-        # Pose 데이터를 파일에 저장
-        pose_line = f"{pose_x} {pose_y} {pose_z} {orient_x} {orient_y} {orient_z} {orient_w}\n"
-        
+        # 새로 추가된 부분: linear_x 값을 기준으로 전진/후진 방향 판단
+        direction = "forward" if linear_x >= 0 else "reverse"
+
+        # Pose 데이터를 파일에 저장 (방향 정보 추가)
+        pose_line = f"{pose_x} {pose_y} {pose_z} {orient_x} {orient_y} {orient_z} {orient_w} {direction}\n"
         with open(self.pose_file, 'a') as f:
             f.write(pose_line)
         
-        # Twist 데이터를 파일에 저장
-        twist_line = f"{linear_x} {linear_y} {linear_z} {angular_x} {angular_y} {angular_z}\n"
-        
+        # Twist 데이터를 파일에 저장 (방향 정보 추가)
+        twist_line = f"{linear_x} {linear_y} {linear_z} {angular_x} {angular_y} {angular_z} {direction}\n"
         with open(self.twist_file, 'a') as f:
             f.write(twist_line)
         
         self.get_logger().info(
-            f"Data saved - Pose: ({pose_x:.3f}, {pose_y:.3f}, {pose_z:.3f}), "
+            f"Data saved - Direction: {direction}, Pose: ({pose_x:.3f}, {pose_y:.3f}, {pose_z:.3f}), "
             f"Twist: ({linear_x:.3f}, {linear_y:.3f}, {linear_z:.3f})"
         )
 
@@ -75,7 +82,6 @@ def main(args=None):
     rclpy.init(args=args)
     
     try:
-        # 저장할 파일명 지정 (선택사항)
         logger = OdometryLogger("pose_data.txt", "twist_data.txt")
         rclpy.spin(logger)
     except KeyboardInterrupt:
