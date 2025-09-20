@@ -52,11 +52,12 @@ class DebugHeadingLogger(Node):
         print(f"로봇 기준 속도 - 전진: {linear_x:.4f}, 좌우: {linear_y:.4f}")
         print(f"현재 위치: ({pose_x:.3f}, {pose_y:.3f})")
         
-        # 로봇 기준 전진/후진 판단
+        # 로봇 기준 전진/후진 판단 (이 로봇은 좌표계가 반대)
         if abs(linear_x) < 0.02:
             robot_direction = "STOP"
         else:
-            robot_direction = "FORWARD" if linear_x > 0 else "REVERSE"
+            # 이 로봇에서는 linear_x < 0이 전진!
+            robot_direction = "FORWARD" if linear_x < 0 else "REVERSE"
         
         print(f"🤖 로봇 기준 방향: {robot_direction}")
         
