@@ -10,7 +10,7 @@ ekf_global:
   # =================================================================================================================
   ros__parameters:
     frequency: 30.0
-    sensor_timeout: 0.5
+    sensor_timeout: 0.1
     two_d_mode: true  # 2D 모드 (Z축 고정)
     print_diagnostics: true
     debug: false

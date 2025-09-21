@@ -8,10 +8,10 @@ ekf_local:
   # =================================================================================================================
   ros__parameters:
     frequency: 30.0
-    sensor_timeout: 0.5
+    sensor_timeout: 0.1
     two_d_mode: false  # 2D 모드 (z축 고정)
     print_diagnostics: true
-    predict_to_current_time: true
+    predict_to_current_time: false
     debug: false
 
   # Frame 설정
