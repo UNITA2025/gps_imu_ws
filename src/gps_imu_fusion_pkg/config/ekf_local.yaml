@@ -13,7 +13,8 @@ ekf_local:
     print_diagnostics: true
     predict_to_current_time: false
     debug: false
-
+    publish_tf: false
+    
   # Frame 설정
     map_frame: map  # 지도 좌표계 (절대적인 기준)
     odom_frame: odom # 주행 거리계(Odometry) 좌표계
